@@ -1,6 +1,6 @@
 package listaligada;
 
-public class ListaLigada {
+public class ListaLigada <T>{
 
     private Nodo head; //Apuntador a la cabecera de la lista(Primer Nodo)
     private Nodo tail; //Apuntador a la cola de la lista(Ultimo Nodo)
@@ -22,7 +22,7 @@ public class ListaLigada {
         this.size++;
     }
      */
-    public void add(int dato) {
+    public void add(T dato) {
         Nodo nuevoNodo = new Nodo(dato);
         this.size++;
         this.tail = nuevoNodo;//se mueve el apuntador al ultimo nodo
@@ -36,7 +36,7 @@ public class ListaLigada {
         }
     }
     
-    public  void add (int dato, int posicion){
+    public  void add (T dato, int posicion){
     Nodo nuevoNodo = new Nodo(dato);
     int i = 1;
     actual = head;
@@ -54,7 +54,7 @@ public class ListaLigada {
         int posicion = 1;
         actual = head;
         while (actual != null) {
-            int elemento = actual.getDato();
+            T elemento = (T) actual.getDato();
             System.out.println("Dato= " + elemento + "almacenado en nodo: " + posicion);
             actual = actual.getSiguiente();
             posicion++;

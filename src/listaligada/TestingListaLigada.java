@@ -61,5 +61,6 @@ public class TestingListaLigada {
         System.out.println("---------------------------");
         System.out.println("Contenido de la lista");
         lista.printList();
+        
     }
 }
