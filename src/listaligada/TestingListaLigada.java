@@ -47,7 +47,7 @@ public class TestingListaLigada {
         dato = Integer.parseInt(entrada);
         lista.add(dato);
 
-        System.out.println("--------------------------");
+        /*System.out.println("--------------------------");
         System.out.println("Contenido lista ligada");
         lista.printList();
 
@@ -60,7 +60,22 @@ public class TestingListaLigada {
 
         System.out.println("---------------------------");
         System.out.println("Contenido de la lista");
-        lista.printList();
-        
+        lista.printList();*/
+        //Otra lista ligada, ahora almacena Strings
+        ListaLigada<String> lista2 = new ListaLigada<>();
+        System.out.println("Creando Nueva Lista de Strings");
+        for (;;) {
+            System.out.println("Escriba dato String para agregar a la lista: ");
+
+            entrada = bufer.readLine();
+            lista2.add(entrada);
+            respuesta = entrada.charAt(0);
+            if (respuesta == 'n' || respuesta == 'N') {
+                break;
+            }
+            System.out.println("Contenido de la lista de Strings: ");
+            lista2.printList();
+
+        }
     }
 }
